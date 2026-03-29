@@ -32,6 +32,20 @@
             #binding-cells = <0>;
             bindings = <&kp RCTRL>, <&tog 2>;
         };
+
+        td_minus: td_minus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp NON_US_BACKSLASH>, <&kp MINUS>, <&kp UNDERSCORE>;
+        };
+
+        td_1: td_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_1";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
+        };
     };
 
     keymap {
@@ -48,7 +62,7 @@
 
         layer1 {
             bindings = <
-&kp GRAVE  &kp N1  &td_2   &kp N3  &kp N4  &kp N5  &kp N6            &kp N7             &kp N8  &kp N9     &kp N0            &kp MINUS  &kp EQUAL
+&kp GRAVE  &td_1   &td_2   &kp N3  &kp N4  &kp N5  &kp N6            &kp N7             &kp N8  &kp N9     &kp N0            &kp MINUS  &kp EQUAL
 &trans     &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans     &kp SINGLE_QUOTE  &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans  &kp SLASH  &trans            &trans
            &trans  &trans          &trans          &trans                                       &trans     &trans
