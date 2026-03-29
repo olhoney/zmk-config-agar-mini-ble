@@ -11,6 +11,15 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        td2: td2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD2";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp AT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,7 +34,7 @@
 
         layer1 {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6            &kp N7             &kp N8  &kp N9     &kp N0            &kp MINUS  &kp EQUAL
+&kp GRAVE  &kp N1  &td2    &kp N3  &kp N4  &kp N5  &kp N6            &kp N7             &kp N8  &kp N9     &kp N0            &kp MINUS  &kp EQUAL
 &trans     &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans     &kp SINGLE_QUOTE  &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans  &kp SLASH  &trans            &trans
            &trans  &trans          &trans          &trans                                       &trans     &trans
