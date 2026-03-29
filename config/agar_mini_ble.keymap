@@ -23,21 +23,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NUM";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT>, <&tog 1>;
+            bindings = <&kp RIGHT_ALT>, <&sl 1>, <&tog 1>;
         };
 
         td_sym: td_sym {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SYM";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL>, <&tog 2>;
-        };
-
-        td_minus: td_minus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MINUS";
-            #binding-cells = <0>;
-            bindings = <&kp NON_US_BACKSLASH>, <&kp MINUS>, <&kp UNDERSCORE>;
+            bindings = <&kp RCTRL>, <&sl 2>, <&tog 2>;
         };
 
         td_1: td_1 {
@@ -71,10 +64,10 @@
 
         layer2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans          &trans          &trans                  &trans  &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT  &kp CARET       &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS
+&trans     &trans           &trans  &trans    &trans      &trans     &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans        &trans                &kp DOUBLE_QUOTES      &trans
+&trans     &trans           &trans  &trans    &trans      &trans     &trans          &trans           &trans        &kp QUESTION          &trans                 &trans
+           &trans           &trans            &trans                 &trans                                         &trans                &trans
             >;
         };
 
